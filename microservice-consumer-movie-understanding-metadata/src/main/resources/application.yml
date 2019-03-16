@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://loogodamner1:8761/eureka/ , http://loogodamner2:8762/eureka/
+      defaultZone: http://loogodamner1:8761/eureka/
   instance:
     prefer-ip-address: true
 

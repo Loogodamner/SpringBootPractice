@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+---
+spring:  profiles: loogodamner1
+server:  port: 8761
+eureka:
+  instance:    hostname: loogodamner1
+  client:    service-url:      defaultZone: http://loogodamner2:8762/eureka/
+---
+spring:
+  profiles: loogodamner2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: loogodamner2
+  client:
+    service-url:
+      defaultZone: http://loogodamner1:8761/eureka/
