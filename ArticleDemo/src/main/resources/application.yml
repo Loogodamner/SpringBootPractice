@@ -8,3 +8,9 @@ spring:
     password: bbb961122
   thymeleaf:
     cache: false
+eureka:
+  client:
+    service-url:
+      dafaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
