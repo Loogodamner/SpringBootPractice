@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="common/layout(title='编辑文章')">
+<!--发表文章信息表单-->
+<div th:fragment="main_content">
+    <form action="/updateArticle" method="post">
+        <input type="hidden" name="id" th:value="${article.getId()}">
+        <input type="hidden" name="createdate" th:value="${article.getCreatedate()}">
+        文章标题:<input type="text" name="title" th:value="${article.getTitle()}"><br/><br/>
+        作者名称:<input type="text" name="author" th:value="${article.getAuthor()}"><br/><br/>
+        文章内容:<input type="text" name="content" th:value="${article.getContent()}"><br/><br/>
+        <input type="submit" value="确定">
+    </form>
+</div>
+</html>

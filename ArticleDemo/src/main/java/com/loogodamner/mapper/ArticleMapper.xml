@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loogodamner.hellp.mapper.ArticleMapper">
+	<resultMap id="articleMap" type="Article">
+		<id property="id" column="id" javaType="java.lang.Integer"/>
+		<result property="title" column="title" javaType="java.lang.String"/>
+		<result property="author" column="author" javaType="java.lang.String"/>
+		<result property="content" column="content" javaType="java.lang.String"/>
+		<result property="date" column="date" javaType="java.util.Date"/>
+	</resultMap>
+	<select id="selectAllArticle" resultMap="articleMap">
+		select * from article;
+	</select>
+	<insert id="addArticle" parameterType="com.loogodamner.hello.beans.Article"
+		useGeneratedKeys="true" keyProperty="id">
+			insert into article(title,author,content,date)
+			values (#{title},#{author},#{content},#{date})
+	</insert>
+	<update id="editArticle" parameterType="com.loogodamner.hello.beans.Article">
+		update article 
+		set title=#{title},author=#{author},content=#{content},date=#{date}
+		where id = #{id}
+	</update>
+	<delect id="deleteArticleById" >
+		delect from article where id = #{id}
+	</delect>
+	<select id="getArticleById" parameterType="com.loogodamner.hello.beans.Article">
+		select * from article
+		where id = #{id}
+	</select>
+</mapper>

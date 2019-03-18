@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:replace="common/layout(title='发表文章')">
+    <!--发表文章信息表单-->
+    <div th:fragment="main_content">
+        <form action="/saveArticle" method="post">
+            文章标题:<input type="text" name="title"><br/><br/>
+            作者名称:<input type="text" name="author"><br/><br/>
+            文章内容:<input type="text" name="content"><br/><br/>
+            <input type="submit" value="确定">
+        </form>
+
+    </div>
+</html>

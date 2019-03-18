@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="common/layout(title='测试布局')">
+
+<div th:fragment="main_content">
+    <article class="text-center">
+        <h3 th:text="${article.getTitle()}"></h3>
+        <h4 th:text="${article.getAuthor()}"></h4>
+        <p th:text="${article.getContent()}" class="text-left"></p>
+        <h4 th:text="${article.getCreatedate()}" class="text-right"></h4>
+    </article>
+</div>
+</html>

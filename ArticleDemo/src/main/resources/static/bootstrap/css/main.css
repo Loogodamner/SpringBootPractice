@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*=================超链接样式设置=================*/
+a{
+    color: #000;
+}
+a:hover{
+    color: #985f0d;
+}
+
+
+
+/*===================页面底部样式===============*/
+footer{
+    background-color: #3c3c3c;
+    color: white;
+    text-align: center;
+}
+
+footer{
+    display: block;
+    padding: 10px;
+}
+
+
+footer ul li{
+    list-style: none;
+    float: left;
+}
+
+footer ul li a{
+    text-align: center;
+    display: block;
+    min-width: 50px;
+    margin: 0px 10px;
+    color: white;
+}
+

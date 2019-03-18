@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="common/layout(title='测试布局')">
+
+<div th:fragment="main_content">
+    <h3 th:text="${info}">错误消息</h3>
+</div>
+</html>
