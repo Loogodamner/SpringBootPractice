@@ -1,0 +1,21 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: microservice-consumer-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://loogodamner1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#若不想注册到eureka server
+#spring.cloud.service-registry.auto-registration.enabled=false
+
+microservice-provider-user:
+#指定ribbon Server的名字
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#全局配置
+#ribbon：
+#  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

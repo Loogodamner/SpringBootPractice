@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.loogodamner</groupId>
-	<artifactId>microservice-consumer-movie</artifactId>
+	<artifactId>microservice-consumer-movie-ribbon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservice-simple-consumer-movie</name>
 	<description>Demo project for Spring Boot</description>
